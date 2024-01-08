@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display_AccessRecord</title>
+    <style>
+        table,tr,th,td
+        {
+            border-collapse: collapse;
+            border: 3px solid black;
+            width: 400px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+   <center>
+    <h1>Display_AccessRecord</h1>
+    <table cellpadding="5px" cellspacing="5px">
+        <tr>
+            <th>Name</th>
+            <th>Date</th>
+            <th>Author</th>
+        </tr>
+
+        {% for ao in APDO %}
+            <tr>
+                <td>{{ao.name}}</td>
+                <td>{{ao.date}}</td>
+                <td>{{ao.author}}</td>
+            </tr>
+        {% endfor %}
+    </table>
+   </center> 
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display_Webpages</title>
+    <style>
+        table,tr,th,td
+        {
+            border-collapse: collapse;
+            border: 3px solid black;
+            width: 600px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+  <center>
+    <h1>Display_Webpages</h1>
+    <table cellpadding="5px" cellspacing="5px">
+        <tr>
+            <th>Topic Name</th>
+            <th>Name</th>
+            <th>URL</th>
+            <th>Email</th>
+        </tr>
+
+        {% for w in WPDO %}
+        <tr>
+            <td>{{w.topic_name}}</td>
+            <td>{{w.name}}</td>
+            <td>{{w.url}}</td>
+            <td>{{w.email}}</td>
+        </tr>
+        {% endfor %}
+    </table>
+  </center>  
+</body>
+</html>
